@@ -1,0 +1,46 @@
+
+a,  a:visited, a:link  {
+  text-decoration: none;
+  color: #fff;
+}
+h2 {
+  color: #495c60;
+  text-align: center;
+}
+h3 {
+  font-size: 1.2em !important;
+  font-weight: 600 !important;
+}
+.locations, .location-empty {
+  background-color: #7A9E9F;
+  color: #ffffff;
+  font-family: 'Montserrat'
+}
+
+.locations {
+  margin: 0;
+  padding: 10px 0 10px 10px;
+
+}
+
+.location-empty {
+  margin: 0;
+  padding: 10px 0 10px 10px;
+}
+.selected {
+  z-index: 3;
+  background-color: #B3D4D4;
+  color: #4F6367;
+}
+
+.selected h3 a {
+color: #4F6367;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}

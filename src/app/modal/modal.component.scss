@@ -1,0 +1,27 @@
+.modal-error {
+  font-family: 'Montserrat';
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  min-height: 50vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.modal-error .modal {
+  background-color: #fff;
+  width: 50vw;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.modal h3 {
+  line-height: 36px;
+  margin-left: 20px;
+}
+.modal p {
+  margin-left: 20px;
+}
+.hidden {
+  display: none;
+}

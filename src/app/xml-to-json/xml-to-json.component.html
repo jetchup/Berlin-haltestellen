@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="location-empty" *ngIf="!coordinates"  >
+    <p >Type street and find your Haltestelle!</p>
+  </div>
+  <!-- this used to blend one element in if selected
+  <div *ngIf="lonelyCoordinate" class="modal">
+    <app-haltestelle [oneJsonResult]="oneJsonResult" #haltestelle  ></app-haltestelle>
+
+  </div>
+  -->
+  <div *ngIf="coordinates" class="locations" (redirect)="coordinates=$event"  >
+    <mat-list *ngFor="let item of JSONresult; index as i;" class="wrap">
+      <mat-list-item id="{{item.StopLocation.extId}}" (click)="showMyMarker(item.StopLocation.extId, coordinates)" class="content">
+        <mat-icon matListIcon class="fas fa-bus"></mat-icon>
+      <h3 matLine>{{ item.StopLocation.name }}</h3>
+      <p matLine>
+        <span> List modes of transportation </span>
+        <span class="demo-2"> -- lines on this stop </span>
+      </p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

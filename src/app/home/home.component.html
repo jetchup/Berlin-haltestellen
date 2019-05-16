@@ -1,0 +1,16 @@
+
+<div class="wrap all">
+  <app-modal #modal [error]="error" ></app-modal>
+  <mat-toolbar>
+    <h1>
+      HALTESTELLE FINDER
+    </h1>
+    <!-- This fills the remaining space of the current row, from https://material.angular.io/components/toolbar/overview -->
+    <span class="example-fill-remaining-space"></span>
+  </mat-toolbar>
+  <app-map #map [coordinates]="coordinates" [oneCoordinate]="oneCoordinate"></app-map>
+  <app-searchbar (searchClicked)="xml.searchButtonClicked(); map.startMarkers()" #newConfigUrl></app-searchbar>
+  <app-xml-to-json class="content" #xml (emitError)="error=$event" (redirect)="coordinates=$event" (oneCoordinate)="oneCoordinate=$event" [newConfigUrl] = "newConfigUrl" (click)="map.clickOnHaltestelle()"></app-xml-to-json>
+  <div class="footer">
+  </div>
+</div>

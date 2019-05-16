@@ -1,0 +1,29 @@
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.all {
+}
+h1 {
+  margin: 0;
+  font-family: 'Kanit';
+  font-weight: 600;
+  margin-top:30px;
+  font-size: 1.3em;
+}
+.mat-toolbar {
+  background-color: #B8D8D8;
+  color: #7A9E9F;
+}
+.content {
+  flex: 1 1 auto;
+}
+.footer {
+  flex-shrink: 0;
+  background-color: grey;
+  min-height: 50px;
+}
+app-xml-to-json {
+  background-color: #7A9E9F;
+}
